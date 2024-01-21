@@ -1,5 +1,7 @@
 <label for="sname">Server Name</label>
-<input class="form-control" type="text" id="sname" name="sname" (input)="onUpdateServerName($event)" />
+<!-- <input class="form-control" type="text" id="sname" name="sname" (input)="onUpdateServerName($event)" /> -->
+<!-- [(ngModel)] Two Way Data Binding -->
+<input class="form-control" type="text" id="sname" name="sname" [(ngModel)]="serverName" />
 <p>{{serverName}}</p>
 <button class="btn btn-primary" 
         [disabled]="!allowNewServer" 
