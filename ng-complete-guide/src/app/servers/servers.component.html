@@ -8,5 +8,9 @@
         (click)="onServerCreation()">Add Server</button>
 <!-- <p>{{serverCreationStatus}}</p> -->
 <p *ngIf="serverCreated">New server created with name - {{serverName}}</p>
+<!-- <p *ngIf="serverCreated; else noServers">New server created with name - {{serverName}}</p>
+<ng-template #noServers>
+        <p>No Servers!</p>
+</ng-template> -->
 <app-server></app-server>
 <app-server></app-server>
