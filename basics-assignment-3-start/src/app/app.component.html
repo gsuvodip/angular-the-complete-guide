@@ -11,7 +11,9 @@
       <hr/>
       <button class="btn btn-primary" (click)="displayDetails()">Display Details</button>
       <p *ngIf="isVisible">{{content}}</p>
-      <p *ngFor="let log of logs" [ngStyle]="{backgroundColor: log > 4 ? 'blue' : 'transparent'}" [ngClass]="{'white-text': log > 4}">{{log}}</p>
+      <p *ngFor="let log of logs; let i = index" 
+          [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}" 
+          [ngClass]="{'white-text': i >= 4}">{{log}}</p>
     </div>
   </div>
 </div>

@@ -8,12 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   content: string = 'Secret Password = tuna'
   isVisible: boolean = false
-  logs: number[] = []
+  logs: any[] = []
 
   displayDetails(): void {
     this.isVisible = !this.isVisible;
     // console.log(this.logs.length + 1)
-    this.logs.push(this.logs.length + 1)
+    // this.logs.push(this.logs.length + 1)
+    this.logs.push(new Date())
   }
 
 }
